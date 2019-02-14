@@ -1,3 +1,8 @@
 # 1. Deploy using sudo docker compose
 sudo docker stack deploy -c docker-compose.yml getstartedlab
 
+# 2. Visit docker visualizer 
+http://localhost:8080/
+
+# 3 Visit your app
+http://localhost:4000/
