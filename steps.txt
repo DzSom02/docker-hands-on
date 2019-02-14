@@ -1,0 +1,21 @@
+# 1. Build sudo docker container
+sudo docker build --tag=tecnouab-course .
+
+# 2. Check sudo docker image
+sudo docker image ls
+
+# 3. Run the app
+sudo docker run -p 4000:80 tecnouab-course
+
+# 3.1. Run the app in background (add -d)
+sudo docker run -d -p 4000:80 tecnouab-course
+
+# 3.2 Visit local server
+http://localhost:4000/
+
+# 4. Stop the container (if app runned in background)
+# 4.1 Look for the container id
+sudo docker container ls
+
+# 4.2 Stop container
+sudo docker container stop <container_id> 
