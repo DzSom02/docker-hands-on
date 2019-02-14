@@ -1,3 +1,6 @@
+# 1. Create data folder
+mkdir data
+
 # 1. Deploy using sudo docker compose
 sudo docker stack deploy -c docker-compose.yml getstartedlab
 
