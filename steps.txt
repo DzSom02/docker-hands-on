@@ -2,7 +2,7 @@
 sudo docker swarm init
 
 # 2. Deploy using sudo docker compose
-sudo docker stack deploy -c sudo docker-compose.yml getstartedlab
+sudo docker stack deploy -c docker-compose.yml getstartedlab
 
 # 3. Check that the service is running 
 sudo docker service ls
