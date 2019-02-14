@@ -1,21 +1,14 @@
-# 1. Build sudo docker container
-sudo docker build --tag=tecnouab-course .
+# 1. Init sudo docker swarm
+sudo docker swarm init
 
-# 2. Check sudo docker image
-sudo docker image ls
+# 2. Deploy using sudo docker compose
+sudo docker stack deploy -c sudo docker-compose.yml getstartedlab
 
-# 3. Run the app
-sudo docker run -p 4000:80 tecnouab-course
+# 3. Check that the service is running 
+sudo docker service ls
 
-# 3.1. Run the app in background (add -d)
-sudo docker run -d -p 4000:80 tecnouab-course
+# 4. Check that we have 5 instances of the app running
+sudo docker service ps getstartedlab_web
 
-# 3.2 Visit local server
-http://localhost:4000/
-
-# 4. Stop the container (if app runned in background)
-# 4.1 Look for the container id
-sudo docker container ls
-
-# 4.2 Stop container
-sudo docker container stop <container_id> 
+# 5.
+sudo docker container ls -q
