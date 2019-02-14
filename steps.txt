@@ -1,14 +1,3 @@
-# 1. Init sudo docker swarm
-sudo docker swarm init
+# 1. Deploy using sudo docker compose
+sudo docker stack deploy -c docker-compose.yml getstartedlab
 
-# 2. Deploy using sudo docker compose
-sudo docker stack deploy -c sudo docker-compose.yml getstartedlab
-
-# 3. Check that the service is running 
-sudo docker service ls
-
-# 4. Check that we have 5 instances of the app running
-sudo docker service ps getstartedlab_web
-
-# 5.
-sudo docker container ls -q
